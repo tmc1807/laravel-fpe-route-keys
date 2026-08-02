@@ -1,0 +1,58 @@
+{
+    "name": "tmc1807/laravel-fpe-route-keys",
+    "description": "Format-preserving encrypted route keys for Laravel Eloquent models.",
+    "keywords": [
+        "laravel",
+        "eloquent",
+        "route",
+        "route-key",
+        "fpe",
+        "format-preserving-encryption",
+        "ff1",
+        "obfuscation"
+    ],
+    "license": "MIT",
+    "type": "library",
+    "require": {
+        "php": "^8.2",
+        "ext-gmp": "*",
+        "ext-openssl": "*",
+        "illuminate/database": "^11.0|^12.0|^13.0",
+        "illuminate/support": "^11.0|^12.0|^13.0",
+        "jan2000/ffxradix": "^1.1"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^9.0|^10.0|^11.0",
+        "pestphp/pest": "^3.0",
+        "laravel/pint": "^1.13"
+    },
+    "autoload": {
+        "psr-4": {
+            "Tmc1807\\LaravelFpeRouteKeys\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Tmc1807\\LaravelFpeRouteKeys\\Tests\\": "tests/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Tmc1807\\LaravelFpeRouteKeys\\FpeRouteKeysServiceProvider"
+            ]
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/pest",
+        "pint": "vendor/bin/pint"
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "config": {
+        "sort-packages": true,
+        "allow-plugins": {
+            "pestphp/pest-plugin": true
+        }
+    }
+}
